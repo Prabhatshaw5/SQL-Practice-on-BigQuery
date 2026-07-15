@@ -27,8 +27,9 @@ from student_raw_transformed_withtime
 where Dcode= "YMT";
 
 /*5.•  Find the age of students (hint: use date() function)*/
-select *
-from student_raw_transformed_withtime
+select fullname, timestampdiff(year, str_to_date(dob, '%d-%m-%y'),curdate() )as age
+from student_raw_transformed_withtime;
 
-
-/*•  Show the age in the following format: years in one column and the month in another.*/
+/*6.• Show the age in the following format: years in one column and the month in another.*/
+select fullname, timestampdiff(year, str_to_date(dob, '%d-%m-%y'),curdate() )as years, mod(timestampdiff (month,str_to_date(dob, '%d-%m-%y'),curdate() ),12 ) as months
+from student_raw_transformed_withtime;
