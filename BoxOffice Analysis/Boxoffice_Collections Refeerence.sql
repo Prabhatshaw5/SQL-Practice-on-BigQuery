@@ -1,5 +1,5 @@
 /*
-Hello, 
+Hi Hello, 
 Download the attached files and un-zip them (if you don't know how, please Google).
 
 1. Please create a new database: boxoffice_db (only if you've not already created this database). 
